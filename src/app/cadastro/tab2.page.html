@@ -22,7 +22,7 @@
   </ion-list>
 
   <ion-list id="listaAnimal" hidden>
-    <ion-item-sliding *ngFor="let a of animais">
+    <ion-item-sliding *ngFor="let a of animais | async">
       <ion-item (click)="editAnimal(a.id)">
         <h2>{{a.nome}}</h2>
       </ion-item>
@@ -42,7 +42,7 @@
   </ion-list>
 
   <ion-list id="listaCliente" hidden>
-    <ion-item-sliding *ngFor="let c of clientes">
+    <ion-item-sliding *ngFor="let c of clientes | async">
       <ion-item (click)="editCliente(c.id)">
         <h2>{{c.nome}}</h2>
       </ion-item>
