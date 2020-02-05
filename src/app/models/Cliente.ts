@@ -4,4 +4,8 @@ export class Cliente{
     cpf : String;
     telefone : String;
     email : String;
+
+    constructor(values: Object = {}) {
+        Object.assign(this, values);
+    }
 }

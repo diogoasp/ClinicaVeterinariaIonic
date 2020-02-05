@@ -4,4 +4,8 @@ export class Animal{
     raca : String;
     especie : String;
     sexo : String;
+
+    constructor(values: Object = {}) {
+        Object.assign(this, values);
+    }
 }

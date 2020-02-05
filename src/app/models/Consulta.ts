@@ -5,4 +5,8 @@ export class Consulta{
     diagnostico: String;
     dtConsulta : String;
     id_animal: number;
+
+    constructor(values: Object = {}) {
+        Object.assign(this, values);
+    }
 } 
