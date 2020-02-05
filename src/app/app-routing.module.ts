@@ -13,6 +13,14 @@ const routes: Routes = [
   {
     path: 'contact',
     loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'form-clientes',
+    loadChildren: () => import('./form-clientes/form-clientes.module').then( m => m.FormClientesPageModule)
+  },
+  {
+    path: 'form-animais',
+    loadChildren: () => import('./form-animais/form-animais.module').then( m => m.FormAnimaisPageModule)
   }
 ];
 @NgModule({
