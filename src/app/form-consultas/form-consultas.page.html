@@ -11,8 +11,8 @@
     </ion-item>
     <ion-item>
       <ion-label>Animal</ion-label>
-      <ion-select *ngFor="let a of animal | async">
-        <ion-option value="a.id">{{a.nome}}</ion-option>
+      <ion-select [(ngModel)]="id_animal">
+        <ion-select-option *ngFor="let a of animais | async" value="a.id">{{a.nome}}</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
@@ -27,10 +27,10 @@
       <ion-label stacked>Diagnóstico</ion-label>
       <ion-input type="text" name="diagnostico" [(ngModel)]="consulta.diagnostico"></ion-input>
     </ion-item>
-    <ion-item>
+    <!-- <ion-item>
       <ion-label stacked>Data da Consulta</ion-label>
       <ion-datetime displayFormat="DD MMM YYYY, HH:mm" name="dtConsulta" [(ngModel)]="consulta.dtConsulta"></ion-input>
-    </ion-item>   
+    </ion-item>    -->
   </ion-list>
   <ion-button block (click)="save()">Salvar</ion-button>
   <ion-item href="/">

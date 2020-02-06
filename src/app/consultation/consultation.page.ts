@@ -18,7 +18,7 @@ export class ConsultationPage implements OnInit{
   animal: Animal;
   animais: Observable<any>;
 
-  constructor(private router: Router, private apiConsulta: ApiConsultasService, private apiAnimal: ApiAnimalService) {
+  constructor(private router: Router, private apiConsulta: ApiConsultasService) {
     this.getAllConsultas();
   }
 
@@ -32,7 +32,15 @@ export class ConsultationPage implements OnInit{
     this.apiConsulta.get(id);
   }
 
-  showDetailsAnimal(id: number) {
-    this.animais = this.apiAnimal.get(id);
+  addConsulta() {
+    this.router.navigate(['form-consultas', 0]);
+  }
+
+  editConsulta(id: number) {
+    this.router.navigate(['form-consultas', id]);
+  }
+
+  removeConsulta(id: number) {
+    this.apiConsulta.delete(id).subscribe(data => { this.getAllConsultas() });
   }
 }

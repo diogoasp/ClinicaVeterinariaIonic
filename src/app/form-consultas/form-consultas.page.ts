@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Consulta } from '../models/Consulta';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiConsultasService } from '../service/api-consultas.service';
+import { Observable } from 'rxjs';
+import { ApiAnimalService } from '../service/api-animais.service';
 
 @Component({
   selector: 'app-form-consultas',
@@ -10,12 +12,14 @@ import { ApiConsultasService } from '../service/api-consultas.service';
 })
 export class FormConsultasPage implements OnInit {
 
+  animais: Observable<any>
   consulta : Consulta;
   id: number = 0;
 
   constructor(private actRoute: ActivatedRoute, private router: Router,
-    private api:ApiConsultasService) { 
+    private api:ApiConsultasService, private apiAnimal: ApiAnimalService) { 
       this.consulta = new Consulta();
+      this.getAllAnimais();
   }
   save(){
     if (this.id==0) {
@@ -40,5 +44,9 @@ export class FormConsultasPage implements OnInit {
         this.consulta = resultado;
       });
     }
+  }
+
+  async getAllAnimais() {
+    this.animais = this.apiAnimal.getAll();
   }
 }
