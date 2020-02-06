@@ -7,11 +7,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-list id="listaConsulta" hidden>
-    <ion-item-sliding *ngFor="let c of consulta | async" class="animalItem">
+  <ion-list id="listaConsulta">
+    <ion-item-sliding *ngFor="let c of consultas | async" class="animalItem">
       <ion-item (click)="showDetailsConsulta(c.id)">
         <h3>{{c.dtConsulta}}</h3>
-        <p>{{c.animal.nome}}</p>
+        <p>{{c.nomeVeterinario}}</p>
       </ion-item>
       <ion-item-options side="end">
         <ion-button color="danger" (click)="removeConsulta(c.id)">
