@@ -4,9 +4,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiAnimalService } from '../service/api-animais.service';
 
 @Component({
-  selector: 'app-form-animais',
-  templateUrl: './form-animais.page.html',
-  styleUrls: ['./form-animais.page.scss'],
+  selector: 'app-form-animals',
+  templateUrl: './form-animals.page.html',
+  styleUrls: ['./form-animals.page.scss'],
 })
 export class FormAnimaisPage implements OnInit {
 
@@ -25,7 +25,7 @@ export class FormAnimaisPage implements OnInit {
     else {
       this.api.update(this.id,this.animal).subscribe(data => {this.ionViewWillEnter()});
     }
-    this.router.navigateByUrl('/animais');
+    this.router.navigateByUrl('/animals');
   }
 
   ngOnInit() {

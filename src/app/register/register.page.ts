@@ -37,11 +37,6 @@ export class RegisterPage implements OnInit{
     this.apiAnimal.delete(id).subscribe(data => { this.getAllAnimais() });
   }
 
-  //mostra os detalhes de animal ao clicar
-  showDetailsAnimal(id: number) {
-    this.apiAnimal.get(id);
-  }
-
   async getAllClientes() {
     this.clientes = this.apiCliente.getAll();
   }

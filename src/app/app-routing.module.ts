@@ -21,10 +21,6 @@ const routes: Routes = [
   {
     path: 'form-animais',
     loadChildren: () => import('./form-animais/form-animais.module').then( m => m.FormAnimaisPageModule)
-  },
-  {
-    path: 'form-consultas',
-    loadChildren: () => import('./form-consultas/form-consultas.module').then( m => m.FormConsultasPageModule)
   }
 ];
 @NgModule({
