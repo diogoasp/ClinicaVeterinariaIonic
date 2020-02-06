@@ -23,7 +23,7 @@
 
   <ion-list id="listaAnimal" hidden>
     <ion-item-sliding *ngFor="let a of animais | async" class="animalItem">
-      <ion-item (click)="editAnimal(a.id)">
+      <ion-item (click)="showDetailsCliente(a.id)">
           <img width="18px" height="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Creative-Tail-Animal-dog.svg/1024px-Creative-Tail-Animal-dog.svg.png" class="animalIco">
         <h3>&emsp;{{a.nome}}</h3>
       </ion-item>
@@ -31,6 +31,10 @@
         <ion-button color="danger" (click)="removeAnimal(a.id)">
           <ion-icon name="trash"></ion-icon>
           Excluir
+        </ion-button>
+        <ion-button color="dark"(click)="editAnimal(a.id)">
+          <ion-icon name="create"></ion-icon>
+          Alterar
         </ion-button>
       </ion-item-options>
     </ion-item-sliding>
@@ -44,13 +48,17 @@
 
   <ion-list id="listaCliente" hidden>
     <ion-item-sliding *ngFor="let c of clientes | async">
-      <ion-item (click)="editCliente(c.id)">
+      <ion-item (click)="showDetailsCliente(c.id)">
         <h2>{{c.nome}}</h2>
       </ion-item>
       <ion-item-options side="end">
         <ion-button color="danger" (click)="removeCliente(c.id)">
           <ion-icon name="trash"></ion-icon>
           Excluir
+        </ion-button>
+        <ion-button color="dark"(click)="editCliente(c.id)">
+          <ion-icon name="create"></ion-icon>
+          Alterar
         </ion-button>
       </ion-item-options>
     </ion-item-sliding>

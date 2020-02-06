@@ -6,4 +6,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-list id="listaConsulta" hidden>
+    <ion-item-sliding *ngFor="let c of consulta | async" class="animalItem">
+      <ion-item (click)="showDetailsConsulta(c.id)">
+        <h3>{{c.dtConsulta}}</h3>
+        <p>{{c.animal.nome}}</p>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-button color="danger" (click)="removeConsulta(c.id)">
+          <ion-icon name="trash"></ion-icon>
+          Excluir
+        </ion-button>
+        <ion-button color="dark"(click)="editConsulta(c.id)">
+          <ion-icon name="create"></ion-icon>
+          Alterar
+        </ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item>
+      <ion-button class="cadastroButton" color="dark" (click)="addConsulta()">
+        <ion-icon slot = "start" name = "add-circle"></ion-icon>
+        Cadastrar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
