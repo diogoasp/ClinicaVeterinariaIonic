@@ -1,12 +1,12 @@
 import { Cliente } from './Cliente';
 
 export class Animal{
-    id : number;
-    nome : String;
-    raca : String;
-    especie : String;
-    sexo : String;
-    responsavel : Cliente;
+    id: number;
+    nome: string;
+    raca: string;
+    especie: string;
+    sexo: string;
+    reponsavel: Cliente;
 
     constructor(values: Object = {}) {
         Object.assign(this, values);

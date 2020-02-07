@@ -9,9 +9,9 @@
 <ion-content>
   <ion-list id="listaConsulta">
     <ion-item-sliding *ngFor="let c of consultas | async" class="animalItem">
-      <ion-item (click)="showDetailsConsulta(c.id)">
+      <ion-item>
         <h3>{{c.dtConsulta}}</h3>
-        <p>{{c.nomeVeterinario}}</p>
+        <p>{{c.id_animal}}</p>
       </ion-item>
       <ion-item-options side="end">
         <ion-button color="danger" (click)="removeConsulta(c.id)">

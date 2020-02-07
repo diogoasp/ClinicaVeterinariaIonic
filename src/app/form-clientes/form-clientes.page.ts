@@ -25,7 +25,7 @@ export class FormClientesPage implements OnInit {
     else {
       this.api.update(this.id,this.cliente).subscribe(data => {this.ionViewWillEnter()});
     }
-    this.router.navigateByUrl('/clientes');
+    this.router.navigateByUrl('/tabs/register');
   }
 
   ngOnInit() {

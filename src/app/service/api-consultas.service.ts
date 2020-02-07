@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { Consulta } from '../models/Consulta';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+import { Animal } from '../models/Animal';
 @Injectable({
     providedIn: 'root'
 })

@@ -18,18 +18,14 @@ export class ConsultationPage implements OnInit{
   animal: Animal;
   animais: Observable<any>;
 
-  constructor(private router: Router, private apiConsulta: ApiConsultasService) {
+  constructor(private router: Router, private apiConsulta: ApiConsultasService, private apiAnimal: ApiAnimalService) {
     this.getAllConsultas();
   }
 
-  ngOnInit(){}
+  ngOnInit(){ }
 
   async getAllConsultas() {
     this.consultas = this.apiConsulta.getAll();
-  }
-
-  showDetailsConsulta(id: number){
-    this.apiConsulta.get(id);
   }
 
   addConsulta() {

@@ -28,7 +28,7 @@ export class FormConsultasPage implements OnInit {
     else {
       this.api.update(this.id,this.consulta).subscribe(data => {this.ionViewWillEnter()});
     }
-    this.router.navigateByUrl('/consultas');
+    this.router.navigateByUrl('/tabs/consultation');
   }
 
   ngOnInit() {
