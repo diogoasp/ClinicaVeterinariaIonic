@@ -11,7 +11,7 @@
     <ion-item-sliding *ngFor="let c of consultas | async" class="animalItem">
       <ion-item>
         <h3>{{c.dtConsulta}}</h3>
-        <p>{{c.id_animal}}</p>
+        <p>{{c.sintomas}}</p>
       </ion-item>
       <ion-item-options side="end">
         <ion-button color="danger" (click)="removeConsulta(c.id)">

@@ -22,7 +22,7 @@ export class ConsultationPage implements OnInit{
     this.getAllConsultas();
   }
 
-  ngOnInit(){ }
+  ngOnInit() { }
 
   async getAllConsultas() {
     this.consultas = this.apiConsulta.getAll();

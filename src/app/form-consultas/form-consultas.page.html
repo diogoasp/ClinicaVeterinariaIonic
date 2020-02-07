@@ -11,8 +11,8 @@
     </ion-item>
     <ion-item>
       <ion-label>Animal</ion-label>
-      <ion-select [(ngModel)]="consulta.id_animal">
-        <ion-select-option *ngFor="let a of animais | async" [value]="a.id">{{a.nome}}</ion-select-option>
+      <ion-select [(ngModel)]="consulta.animal">
+        <ion-select-option *ngFor="let a of animais | async" [value]="a">{{a.nome}}</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>

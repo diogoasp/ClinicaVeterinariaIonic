@@ -73,12 +73,19 @@
       "id_animal": 1
     },
     {
-      "id_animal": 1,
-      "nomeVeterinario": "afa",
-      "sintomas": "efasd",
-      "diagnostico": "fda",
-      "dtConsulta": "2020-02-06T20:38:24.898-03:00",
-      "id": 2
+      "nomeVeterinario": "Dr. Clovis",
+      "animal": {
+        "id": 4,
+        "nome": "Mel",
+        "raca": "RND",
+        "especie": "Gazela",
+        "sexo": "F",
+        "dono_id": 3
+      },
+      "sintomas": "Vomito",
+      "diagnostico": "Carrapato",
+      "dtConsulta": "2020-02-07T15:56:55.708-03:00",
+      "id": 3
     }
   ]
 }
