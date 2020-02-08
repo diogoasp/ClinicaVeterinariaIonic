@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Animal } from '../models/Animal';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiAnimalService } from '../service/api-animais.service';
+import { ApiClientesService } from '../service/api-clientes.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-form-animais',
@@ -12,10 +14,12 @@ export class FormAnimaisPage implements OnInit {
 
   animal : Animal;
   id: number = 0;
+  clientes: Observable<any>;
 
   constructor(private actRoute: ActivatedRoute, private router: Router,
-    private api:ApiAnimalService) { 
+    private api:ApiAnimalService, private apiCliente: ApiClientesService) { 
       this.animal = new Animal();
+      this.getAllCliente();
   }
 
   save(){
@@ -25,7 +29,7 @@ export class FormAnimaisPage implements OnInit {
     else {
       this.api.update(this.id,this.animal).subscribe(data => {this.ionViewWillEnter()});
     }
-    this.router.navigateByUrl('/animais');
+    this.router.navigateByUrl('/tabs/register');
   }
 
   ngOnInit() {
@@ -41,6 +45,10 @@ export class FormAnimaisPage implements OnInit {
         this.animal = resultado;
       });
     }
+  }
+
+  async getAllCliente(){
+    this.clientes = this.apiCliente.getAll();
   }
 
 }

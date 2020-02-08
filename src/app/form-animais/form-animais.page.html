@@ -20,25 +20,25 @@
     <ion-item>
       <ion-label>Espécie</ion-label>
       <ion-select [(ngModel)]="animal.especie">
-        <ion-option value="Canino">Canino</ion-option>
-        <ion-option value="Equino">Equino</ion-option>
-        <ion-option value="Felino">Felino</ion-option>
-        <ion-option value="Roedor">Roedor</ion-option>
-        <ion-option value="Ave">Ave</ion-option>
-        <ion-option value="Bovino">Bovino</ion-option>
+        <ion-select-option value="Canino">Canino</ion-select-option>
+        <ion-select-option value="Equino">Equino</ion-select-option>
+        <ion-select-option value="Felino">Felino</ion-select-option>
+        <ion-select-option value="Roedor">Roedor</ion-select-option>
+        <ion-select-option value="Ave">Ave</ion-select-option>
+        <ion-select-option value="Bovino">Bovino</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>Sexo</ion-label>
       <ion-select [(ngModel)]="animal.sexo">
-        <ion-option value="F">Fêmea</ion-option>
-        <ion-option value="M">Macho</ion-option>
+        <ion-select-option value="F">Fêmea</ion-select-option>
+        <ion-select-option value="M">Macho</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>Responsável</ion-label>
-      <ion-select *ngFor="let c of clientes | async">
-        <ion-option value="c.id">{{c.nome}}</ion-option>
+      <ion-select [(ngModel)]="responsavel">
+        <ion-select-option *ngFor="let c of clientes | async" value="c.id">{{c.nome}}</ion-select-option>
       </ion-select>
     </ion-item>
   </ion-list>
