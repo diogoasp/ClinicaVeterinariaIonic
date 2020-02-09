@@ -1,17 +1,6 @@
 {
   "animais": [
     {
-      "responsavel": {
-        "id": 3,
-        "nome": "Rafael"
-      },
-      "nome": "Gaspar",
-      "raca": "Hamster",
-      "especie": "Roedor",
-      "sexo": "M",
-      "id": 7
-    },
-    {
       "nome": "Logan",
       "raca": "Realeza",
       "especie": "Felino",
