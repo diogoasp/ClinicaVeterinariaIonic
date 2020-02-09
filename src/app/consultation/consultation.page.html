@@ -18,7 +18,7 @@
       </ion-grid>
     </ion-item>
     
-    <ion-item-sliding *ngFor="let c of consultas | async" class="animalItem">
+    <ion-item-sliding *ngFor="let c of consultas | async" (click) = "showDetailsConsulta(c.id)">
       <ion-item>
         <ion-grid>
           <ion-row>
@@ -38,6 +38,20 @@
           Alterar
         </ion-button>
       </ion-item-options>
+      
+      <ion-item hidden id="{{c.id}}" class="detalhes">
+        <ion-list lines = "none">
+          <ion-item>
+            <label>Sintomas:</label>
+            <span>&nbsp;{{c.sintomas}}</span>
+          </ion-item>
+          <ion-item>
+            <label>Diagnóstico:</label>
+            <span>&nbsp;{{c.diagnostico}}</span>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+
     </ion-item-sliding>
     <ion-item>
       <ion-button class="cadastroButton" color="dark" (click)="addConsulta()">
@@ -45,5 +59,6 @@
         Cadastrar
       </ion-button>
     </ion-item>
+    
   </ion-list>
 </ion-content>

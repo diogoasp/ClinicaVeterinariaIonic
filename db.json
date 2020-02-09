@@ -32,6 +32,50 @@
         "nome": "Rafael"
       },
       "id": 9
+    },
+    {
+      "nome": "Pitoco",
+      "raca": "Pincher",
+      "especie": "Canino",
+      "sexo": "M",
+      "responsavel": {
+        "id": 1,
+        "nome": "Danielly"
+      },
+      "id": 10
+    },
+    {
+      "nome": "Pé de Pano",
+      "raca": "Alazão",
+      "especie": "Equino",
+      "sexo": "M",
+      "responsavel": {
+        "id": 3,
+        "nome": "Rafael"
+      },
+      "id": 11
+    },
+    {
+      "nome": "Mimosa",
+      "raca": "Chianina",
+      "especie": "Bovino",
+      "sexo": "F",
+      "responsavel": {
+        "id": 1,
+        "nome": "Danielly"
+      },
+      "id": 12
+    },
+    {
+      "nome": "Tipi",
+      "raca": "Colibri",
+      "especie": "Ave",
+      "sexo": "M",
+      "responsavel": {
+        "id": 2,
+        "nome": "Diogo"
+      },
+      "id": 13
     }
   ],
   "clientes": [

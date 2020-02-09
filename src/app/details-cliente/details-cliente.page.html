@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <span>Nome:&nbsp;</span>
+      <span>{{cliente.nome}}</span>
+    </ion-item>
+    <ion-item>
+      <span>CPF:&nbsp;</span>
+      <span>{{cliente.cpf}}</span>
+    </ion-item>
+    <ion-item>
+      <span>Telefone:&nbsp;</span>
+      <span>{{cliente.telefone}}</span>
+    </ion-item>
+    <ion-item>
+      <span>Email:&nbsp;</span>
+      <span>{{cliente.email}}</span>
+    </ion-item>
+
+    <ion-list hidden *ngFor="let a of result_animal | async">
+        <ion-item onload='setArray(a.id)'>{{a.id}}</ion-item>
+    </ion-list>
+
+    <ion-button (click)="showAnimalList()">Animais</ion-button>
+    <ion-item hidden id="list">
+
+      <ion-list *ngFor="let a of animais | async">
+        <ion-item>
+          <img width="18px" height="18px" src="{{'../assets/icon/' + a.especie + '.png'}}" class="animalIco">
+          <label>Nome:</label>
+          <span>&nbsp;{{a.nome}}</span>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+  </ion-list>
+</ion-content>

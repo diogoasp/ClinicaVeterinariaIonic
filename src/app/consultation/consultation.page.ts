@@ -24,6 +24,15 @@ export class ConsultationPage implements OnInit{
 
   ngOnInit(){ }
 
+    //mostra os detalhes da consulta ao clicar
+    showDetailsConsulta(id: string) {
+      let elem = document.getElementById(id);
+      if(elem.hidden == false)
+        elem.hidden = true;
+      else elem.hidden = false;
+    }
+  
+
   async getAllConsultas() {
     this.consultas = this.apiConsulta.getAll();
     this.animais = this.apiAnimal.getAll();

@@ -33,7 +33,7 @@ export class FormAnimaisPage implements OnInit {
     else {
       this.api.update(this.id,this.animal).subscribe(data => {this.ionViewWillEnter()});
     }
-    this.router.navigateByUrl('/tabs/register');
+    this.router.navigateByUrl('/tabs/register?refresh=1');
   }
 
   ngOnInit() {

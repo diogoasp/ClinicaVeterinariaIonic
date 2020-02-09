@@ -45,6 +45,10 @@ export class RegisterPage implements OnInit{
     else elem.hidden = false;
   }
 
+  showDetailsCliente(id: number) {
+    this.router.navigate(['details-cliente', id]);
+  }
+
   async getAllClientes() {
     this.clientes = this.apiCliente.getAll();
   }
@@ -54,7 +58,7 @@ export class RegisterPage implements OnInit{
   editCliente(id: number) {
     this.router.navigate(['form-clientes', id]);
   }
-  removeCleinte(id: number) {
+  removeCliente(id: number) {
     this.apiCliente.delete(id).subscribe(data => { this.getAllClientes() });
   }
   showListCliente() {
