@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-icon slot="start" color="medium" name="person" class="iconTop"></ion-icon>
+    <ion-icon slot="start" color="primary" name="person" class="iconTop"></ion-icon>
     <ion-title>      
       Detalhes
     </ion-title>
@@ -26,8 +26,10 @@
       <span>Email:&nbsp;</span>
       <span>{{cliente.email}}</span>
     </ion-item>
-    <ion-button (click)="showAnimalList()">Animais</ion-button>
-    <ion-item hidden id="list">
+    <ion-item>
+      <ion-button color="primary" class="buttonCenter" shape="round" (click)="showAnimalList()">Animais</ion-button>
+    </ion-item>
+    <ion-item class="lista" hidden id="list">
 
       <ion-list *ngFor="let animal of animais | async">
         <ion-item *ngIf="animal.responsavel.id == id">
@@ -36,6 +38,9 @@
         </ion-item>
       </ion-list>
 
+    </ion-item>
+    <ion-item>
+      <ion-button color="secondary" class="buttonCenter" shape="round" href="/tabs/register">Voltar</ion-button>
     </ion-item>
   </ion-list>
 </ion-content>

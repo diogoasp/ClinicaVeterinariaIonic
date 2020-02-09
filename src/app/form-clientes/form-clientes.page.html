@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-icon slot="start" color="medium" name="person-add" class="iconTop"></ion-icon>
+    <ion-icon slot="start" color="primary" name="person-add" class="iconTop"></ion-icon>
     <ion-title>      
       Novo Cliente
     </ion-title>
@@ -31,8 +31,5 @@
     </ion-item>
   </ion-list>
   <ion-button block (click)="save()">Salvar</ion-button>
-  <ion-item href="/">
-    <ion-icon slot="start" color="medium" name="home"></ion-icon>
-    <ion-label>Início</ion-label>
-  </ion-item>
+  <ion-button color="secondary" class="buttonRight" shape="round" href="/tabs/register">Voltar</ion-button>
 </ion-content>

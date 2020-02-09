@@ -32,9 +32,75 @@
 
 .iconTop{
     margin-left: 7px;
+    width: 30px;
+    height: 30px;
 }
 
 .botaoFab {
     margin-right: 20px;
     margin-bottom: 10px;
+}
+
+:root {
+    --ion-color-logo: #1B3D9A;
+    --ion-color-logo-rgb: 27,61,154;
+    --ion-color-logo-contrast: #ffffff;
+    --ion-color-logo-contrast-rgb: 255,255,255;
+    --ion-color-logo-shade: #183688;
+    --ion-color-logo-tint: #3250a4;
+    --ion-color-primary: #1B3D9A;
+    --ion-color-primary-rgb: 27,61,154;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255,255,255;
+    --ion-color-primary-shade: #183688;
+    --ion-color-primary-tint: #3250a4;
+    --ion-color-secondary: #81A4CD;
+    --ion-color-secondary-rgb: 129,164,205;
+    --ion-color-secondary-contrast: #000000;
+    --ion-color-secondary-contrast-rgb: 0,0,0;
+    --ion-color-secondary-shade: #7290b4;
+    --ion-color-secondary-tint: #8eadd2;
+    --ion-color-light: #DBE4EE;
+    --ion-color-light-rgb: 219,228,238;
+    --ion-color-light-contrast: #000000;
+    --ion-color-light-contrast-rgb: 0,0,0;
+    --ion-color-light-shade: #c1c9d1;
+    --ion-color-light-tint: #dfe7f0;
+    --ion-color-danger: #EF626C;
+    --ion-color-danger-rgb: 239,98,108;
+    --ion-color-danger-contrast: #000000;
+    --ion-color-danger-contrast-rgb: 0,0,0;
+    --ion-color-danger-shade: #d2565f;
+    --ion-color-danger-tint: #f1727b;
+
+}
+
+.fabAnimais {
+    margin-top: 10px;
+}
+
+.buttonCenter {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.lista {
+    border: 2px solid #1B3D9A;
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.lista:last-child {
+    margin-bottom: 100px;
+}
+
+.voltarInicio {
+    float: right;
+    margin: 20px;
+}
+
+.buttonRight {
+    margin: 20px;
+    float: right;
 }
