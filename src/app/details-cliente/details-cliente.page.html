@@ -28,7 +28,6 @@
       <ion-list *ngFor="let animal of animais | async">
         <ion-item *ngIf="animal.responsavel.id == id">
           <img width="18px" height="18px" src="{{'../assets/icon/' + animal.especie + '.png'}}" class="animalIco">
-          <label>Nome:</label>
           <span>&nbsp;{{animal.nome}}</span>
         </ion-item>
       </ion-list>
