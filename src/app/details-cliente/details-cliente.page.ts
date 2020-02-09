@@ -12,18 +12,14 @@ import { Observable } from 'rxjs';
   styleUrls: ['./details-cliente.page.scss'],
 })
 export class DetailsClientePage implements OnInit {
-  
-  result_animal: Observable<any>;
-  animal: Animal;
+
+  animais : Observable<Animal>;
   cliente: Cliente;
   id: number;
-  array = Array<number>();
 
   constructor(private actRoute: ActivatedRoute, private router: Router,
     private apiAnimal:ApiAnimalService, private apiCliente: ApiClientesService) { 
       this.cliente = new Cliente();
-      this.animal = new Animal();
-      this.getAnimais();
   }
 
   ngOnInit() {
@@ -41,25 +37,16 @@ export class DetailsClientePage implements OnInit {
     }
   }
 
-  getAnimais() {
-    this.result_animal = this.apiAnimal.getAll()
+  async getAnimais() {
+    this.animais = this.apiAnimal.getAll();
   }
 
-  getAnimaisByResponsavel(id : number, idResp : number){
-
-  }
   showAnimalList(){
+    this.getAnimais();
     let elem = document.getElementById("list");
     if(elem.hidden == false)
       elem.hidden = true;
     else elem.hidden = false;
-  }
-
-  setArray(id : number){
-    this.array.push(id);
-    this.array.forEach(a=>{
-      console.log(a.valueOf);
-    });
   }
 
 }
