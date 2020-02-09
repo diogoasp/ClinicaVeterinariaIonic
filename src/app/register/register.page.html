@@ -22,8 +22,8 @@
   </ion-list>
 
   <ion-list id="listaAnimal" hidden>
-    <ion-item-sliding *ngFor="let a of animais | async" >
-      <ion-item (click)="showDetailsAnimal(a.id)" class="animalItem">
+    <ion-item-sliding class="clienteLista" *ngFor="let a of animais | async" >
+      <ion-item lines="none" (click)="showDetailsAnimal(a.id)" class="animalItem">
         <img width="18px" height="18px" src="{{'../assets/icon/' + a.especie + '.png'}}" class="animalIco">
         <h3>&emsp;{{a.nome}}</h3>
       </ion-item>
@@ -38,7 +38,7 @@
         </ion-button>
       </ion-item-options>
       <ion-item hidden id="{{a.id}}">
-        <ion-list>
+        <ion-list lines="none">
           <ion-item>
             <label>Raça:</label>
             <span>&nbsp;{{a.raca}}</span>
@@ -58,17 +58,11 @@
         </ion-list>
       </ion-item>
     </ion-item-sliding>
-    <!-- <ion-item>
-      <ion-button class="cadastroButton" color="dark" (click)="addAnimal()">
-        <ion-icon slot = "start" name = "add-circle"></ion-icon>
-        Cadastrar
-      </ion-button>
-    </ion-item> -->
   </ion-list>
 
   <ion-list id="listaCliente" hidden>
-    <ion-item-sliding *ngFor="let c of clientes | async">
-      <ion-item (click)="showDetailsCliente(c.id)">
+    <ion-item-sliding class="clienteLista" *ngFor="let c of clientes | async">
+      <ion-item lines="none" (click)="showDetailsCliente(c.id)">
         <h2>{{c.nome}}</h2>
       </ion-item>
       <ion-item-options side="end">
@@ -82,14 +76,8 @@
         </ion-button>
       </ion-item-options>
     </ion-item-sliding>
-    <!-- <ion-item>
-      <ion-button class = "cadastroButton" color = "dark" (click) = "addCliente()">
-        <ion-icon slot = "start" name = "add-circle"></ion-icon>
-        Cadastrar
-      </ion-button>
-    </ion-item> -->
   </ion-list>
-  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+  <ion-fab class="botaoFab" horizontal="end" vertical="bottom" slot="fixed">
     <ion-fab-button color="dark">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>

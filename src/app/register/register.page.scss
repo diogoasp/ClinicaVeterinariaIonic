@@ -7,7 +7,6 @@
 
 ion-item{
     border: 0px none white;
-
 }
 .cadastroButton{
     width: 80%;
@@ -21,4 +20,15 @@ ion-col{
     max-width :30% !important;
     padding: 0px;
     margin: 0;;
+}
+
+.clienteLista {
+    border: 2px solid rgba($color: rgb(26, 93, 216), $alpha: 0.5);
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.clienteLista:last-child {
+    margin-bottom: 100px;
 }
