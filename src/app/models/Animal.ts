@@ -1,4 +1,4 @@
-import { Cliente } from './Cliente';
+import { TypeCliente } from './TypeCliente';
 
 export class Animal{
     id: number;
@@ -6,9 +6,6 @@ export class Animal{
     raca: string;
     especie: string;
     sexo: string;
-    reponsavel: Cliente;
+    responsavel: TypeCliente;
 
-    constructor(values: Object = {}) {
-        Object.assign(this, values);
-    }
 }

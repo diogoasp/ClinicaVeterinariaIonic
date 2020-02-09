@@ -38,8 +38,11 @@ export class RegisterPage implements OnInit{
   }
 
   //mostra os detalhes de animal ao clicar
-  showDetailsAnimal(id: number) {
-    this.apiAnimal.get(id);
+  showDetailsAnimal(id: string) {
+    let elem = document.getElementById(id);
+    if(elem.hidden == false)
+      elem.hidden = true;
+    else elem.hidden = false;
   }
 
   async getAllClientes() {
@@ -65,29 +68,11 @@ export class RegisterPage implements OnInit{
 
   showListAnimal() {
     this.getAllAnimais();
-    this.putIcon();
     let listaCliente = document.getElementById("listaCliente");
     let listaAnimal = document.getElementById("listaAnimal");
     listaCliente.hidden = true;
     listaAnimal.hidden = false;
   }
 
-  putIcon(){
-    this.animais.forEach(a => {
-      let element = Array.from(document.getElementsByClassName("animalIco"));
-      element.forEach(e => {
-        var txt = a.especie;
-        console.log("Espécie: "+txt);
-          var img;
-          if(txt == "Canino") img = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Creative-Tail-Animal-dog.svg/1024px-Creative-Tail-Animal-dog.svg.png";
-          if(txt == "Felino") img = "http://www.iconsalot.com/asset/icons/pixel-perfect/animals/512/cat-icon.png";
-          if(txt == "Equino") img = "https://gilletteveterinarian.com/wp-content/uploads/2016/03/Horse-Icon.png";
-          if(txt == "Roedor") img = "http://www.iconsalot.com/asset/icons/freepik/pet-shop-17/128/014-hamster-icon.png";
-          if(txt == "Ave") img = "http://www.iconsalot.com/asset/icons/freepik/pet-shop-17/512/022-bird-icon.png";
-          if(txt == "Bovino") img = "https://gilletteveterinarian.com/wp-content/uploads/2016/03/Cow-Icon.png";
-          //a.= img;
-      }) 
-    });
-  }
 }
 

@@ -1,9 +1,9 @@
 export class Cliente{
     id : number;
-    nome : String;
-    cpf : String;
-    telefone : String;
-    email : String;
+    nome : string;
+    cpf : string;
+    telefone : string;
+    email : string;
 
     constructor(values: Object = {}) {
         Object.assign(this, values);

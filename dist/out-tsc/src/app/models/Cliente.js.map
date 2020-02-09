@@ -1,1 +1,1 @@
-{"version":3,"file":"Cliente.js","sourceRoot":"","sources":["../../../../../src/app/models/Cliente.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,OAAO;CAMnB"}
+{"version":3,"file":"Cliente.js","sourceRoot":"","sources":["../../../../../src/app/models/Cliente.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,OAAO;IAOhB,YAAY,SAAiB,EAAE;QAC3B,MAAM,CAAC,MAAM,CAAC,IAAI,EAAE,MAAM,CAAC,CAAC;IAChC,CAAC;CACJ"}

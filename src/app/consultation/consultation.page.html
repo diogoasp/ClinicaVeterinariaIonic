@@ -8,10 +8,25 @@
 
 <ion-content>
   <ion-list id="listaConsulta">
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Animal</ion-col>
+          <ion-col>Data</ion-col>
+          <ion-col>Veterinário</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    
     <ion-item-sliding *ngFor="let c of consultas | async" class="animalItem">
       <ion-item>
-        <h3>{{c.dtConsulta}}</h3>
-        <p>{{c.id_animal}}</p>
+        <ion-grid>
+          <ion-row>
+            <ion-col size = "3">{{c.animal.nome}}</ion-col>
+            <ion-col size = "5">{{c.dtConsulta | date:"MM/dd/yyyy 'às' h:mma"}}</ion-col>
+            <ion-col size = "4">{{c.nomeVeterinario}}</ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-item>
       <ion-item-options side="end">
         <ion-button color="danger" (click)="removeConsulta(c.id)">

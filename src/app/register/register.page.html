@@ -22,9 +22,9 @@
   </ion-list>
 
   <ion-list id="listaAnimal" hidden>
-    <ion-item-sliding *ngFor="let a of animais | async" class="animalItem">
-      <ion-item (click)="showDetailsCliente(a.id)">
-          <img width="18px" height="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Creative-Tail-Animal-dog.svg/1024px-Creative-Tail-Animal-dog.svg.png" class="animalIco">
+    <ion-item-sliding *ngFor="let a of animais | async" >
+      <ion-item (click)="showDetailsAnimal(a.id)" class="animalItem">
+        <img width="18px" height="18px" src="{{'../assets/icon/' + a.especie + '.png'}}" class="animalIco">
         <h3>&emsp;{{a.nome}}</h3>
       </ion-item>
       <ion-item-options side="end">
@@ -37,6 +37,26 @@
           Alterar
         </ion-button>
       </ion-item-options>
+      <ion-item hidden id="{{a.id}}">
+        <ion-list>
+          <ion-item>
+            <label>Raça:</label>
+            <span>&nbsp;{{a.raca}}</span>
+          </ion-item>
+          <ion-item>
+            <label>Espécie:</label>
+            <span>&nbsp;{{a.especie}}</span>
+          </ion-item>
+          <ion-item>
+            <label>Sexo:</label>
+            <span>&nbsp;{{a.sexo}}</span>
+          </ion-item>
+          <ion-item>
+            <label>Responsável:</label>
+            <span>&nbsp;{{a.responsavel.nome}}</span>
+          </ion-item>
+        </ion-list>
+      </ion-item>
     </ion-item-sliding>
     <ion-item>
       <ion-button class="cadastroButton" color="dark" (click)="addAnimal()">

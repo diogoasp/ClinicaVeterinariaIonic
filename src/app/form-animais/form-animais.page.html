@@ -37,8 +37,8 @@
     </ion-item>
     <ion-item>
       <ion-label>Responsável</ion-label>
-      <ion-select [(ngModel)]="responsavel">
-        <ion-select-option *ngFor="let c of clientes | async" value="c.id">{{c.nome}}</ion-select-option>
+      <ion-select name="cliente" [(ngModel)]="cliente" (ionChange)="setCliente()" required>
+        <ion-select-option *ngFor="let c of clientes | async" [value]="c">{{c.nome}}</ion-select-option>
       </ion-select>
     </ion-item>
   </ion-list>

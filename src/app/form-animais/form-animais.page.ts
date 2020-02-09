@@ -4,6 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiAnimalService } from '../service/api-animais.service';
 import { ApiClientesService } from '../service/api-clientes.service';
 import { Observable } from 'rxjs';
+import { Cliente } from '../models/Cliente';
+import { TypeCliente } from '../models/TypeCliente';
 
 @Component({
   selector: 'app-form-animais',
@@ -15,10 +17,12 @@ export class FormAnimaisPage implements OnInit {
   animal : Animal;
   id: number = 0;
   clientes: Observable<any>;
+  cliente : Cliente;
 
   constructor(private actRoute: ActivatedRoute, private router: Router,
     private api:ApiAnimalService, private apiCliente: ApiClientesService) { 
       this.animal = new Animal();
+      this.cliente = new Cliente();
       this.getAllCliente();
   }
 
@@ -51,4 +55,8 @@ export class FormAnimaisPage implements OnInit {
     this.clientes = this.apiCliente.getAll();
   }
 
+  setCliente(){
+    console.log(this.cliente.nome)
+    this.animal.responsavel = new TypeCliente(this.cliente.nome, this.cliente.id);
+  }
 }

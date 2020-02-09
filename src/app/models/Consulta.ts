@@ -1,13 +1,12 @@
-import { Animal } from './Animal';
+import { TypeAnimal } from './TypeAnimal';
 
 export class Consulta{
     id: number;
     nomeVeterinario: String;
     sintomas: String;
     diagnostico: String;
-    dtConsulta : String;
-    id_animal: number;
-    animal: Animal;
+    dtConsulta : Date;
+    animal: TypeAnimal;
 
     constructor(values: Object = {}) {
         Object.assign(this, values);

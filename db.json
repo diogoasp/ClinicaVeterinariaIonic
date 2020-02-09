@@ -1,43 +1,37 @@
 {
   "animais": [
     {
-      "id": 1,
-      "nome": "Dante",
-      "raca": "Dobberman",
-      "especie": "Cachorro",
+      "responsavel": {
+        "id": 3,
+        "nome": "Rafael"
+      },
+      "nome": "Gaspar",
+      "raca": "Hamster",
+      "especie": "Roedor",
       "sexo": "M",
-      "dono_id": 1
+      "id": 7
     },
     {
-      "id": 2,
       "nome": "Logan",
       "raca": "Realeza",
-      "especie": "Gato",
+      "especie": "Felino",
       "sexo": "M",
-      "dono_id": 2
+      "responsavel": {
+        "id": 2,
+        "nome": "Diogo"
+      },
+      "id": 8
     },
     {
-      "id": 3,
-      "nome": "Clovis",
-      "raca": "Alazão",
-      "especie": "Cavalo",
-      "sexo": "M",
-      "dono_id": 1
-    },
-    {
-      "id": 4,
       "nome": "Mel",
       "raca": "RND",
-      "especie": "Gazela",
-      "sexo": "F",
-      "dono_id": 3
-    },
-    {
-      "nome": "Nick",
-      "raca": "Daschund",
       "especie": "Canino",
-      "sexo": "M",
-      "id": 5
+      "sexo": "F",
+      "responsavel": {
+        "id": 3,
+        "nome": "Rafael"
+      },
+      "id": 9
     }
   ],
   "clientes": [
@@ -69,15 +63,20 @@
       "nomeVeterinario": "Dr.Bartolomeu",
       "sintomas": "Coceira",
       "diagnostico": "Pulgas",
-      "dtConsulta": "01-02-2020",
-      "id_animal": 1
+      "dtConsulta": "2020-01-06T03:00:00-03:00",
+      "animal": {
+        "nome": "Nick",
+        "id": 5
+      }
     },
     {
-      "id_animal": 1,
-      "nomeVeterinario": "afa",
-      "sintomas": "efasd",
-      "diagnostico": "fda",
-      "dtConsulta": "2020-02-06T20:38:24.898-03:00",
+      "animal": {
+        "id": 7,
+        "nome": "Gaspar"
+      },
+      "nomeVeterinario": "Dr. Carlos",
+      "sintomas": "Dores",
+      "dtConsulta": "2020-04-09T14:00:14.514-03:00",
       "id": 2
     }
   ]

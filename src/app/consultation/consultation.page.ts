@@ -26,6 +26,7 @@ export class ConsultationPage implements OnInit{
 
   async getAllConsultas() {
     this.consultas = this.apiConsulta.getAll();
+    this.animais = this.apiAnimal.getAll();
   }
 
   addConsulta() {

@@ -4,6 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiConsultasService } from '../service/api-consultas.service';
 import { Observable } from 'rxjs';
 import { ApiAnimalService } from '../service/api-animais.service';
+import { Animal } from '../models/Animal';
+import { TypeAnimal } from '../models/TypeAnimal';
 
 @Component({
   selector: 'app-form-consultas',
@@ -12,13 +14,15 @@ import { ApiAnimalService } from '../service/api-animais.service';
 })
 export class FormConsultasPage implements OnInit {
 
-  animais: Observable<any>
+  animais: Observable<any>;
+  animal: Animal;
   consulta : Consulta;
   id: number = 0;
 
   constructor(private actRoute: ActivatedRoute, private router: Router,
     private api:ApiConsultasService, private apiAnimal: ApiAnimalService) { 
       this.consulta = new Consulta();
+      this.animal = new Animal();
       this.getAllAnimais();
   }
   save(){
@@ -48,5 +52,10 @@ export class FormConsultasPage implements OnInit {
 
   async getAllAnimais() {
     this.animais = this.apiAnimal.getAll();
+  }
+
+  setAnimal(){
+    console.log(this.animal.nome);
+    this.consulta.animal = new TypeAnimal(this.animal.nome, this.animal.id);
   }
 }

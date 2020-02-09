@@ -13,6 +13,30 @@ const routes = [
     {
         path: 'contact',
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactPageModule)
+    },
+    {
+        path: 'form-clientes',
+        loadChildren: () => import('./form-clientes/form-clientes.module').then(m => m.FormClientesPageModule)
+    },
+    {
+        path: 'form-animais',
+        loadChildren: () => import('./form-animais/form-animais.module').then(m => m.FormAnimaisPageModule)
+    },
+    {
+        path: 'form-consultas',
+        loadChildren: () => import('./form-consultas/form-consultas.module').then(m => m.FormConsultasPageModule)
+    },
+    {
+        path: 'form-clientes/:id',
+        loadChildren: () => import('./form-clientes/form-clientes.module').then(m => m.FormClientesPageModule)
+    },
+    {
+        path: 'form-animais/:id',
+        loadChildren: () => import('./form-animais/form-animais.module').then(m => m.FormAnimaisPageModule)
+    },
+    {
+        path: 'form-consultas/:id',
+        loadChildren: () => import('./form-consultas/form-consultas.module').then(m => m.FormConsultasPageModule)
     }
 ];
 let AppRoutingModule = class AppRoutingModule {

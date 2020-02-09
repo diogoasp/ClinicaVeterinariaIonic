@@ -1,1 +1,1 @@
-{"version":3,"file":"Consulta.js","sourceRoot":"","sources":["../../../../../src/app/models/Consulta.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,QAAQ;CAOpB"}
+{"version":3,"file":"Consulta.js","sourceRoot":"","sources":["../../../../../src/app/models/Consulta.ts"],"names":[],"mappings":"AAEA,MAAM,OAAO,QAAQ;IAQjB,YAAY,SAAiB,EAAE;QAC3B,MAAM,CAAC,MAAM,CAAC,IAAI,EAAE,MAAM,CAAC,CAAC;IAChC,CAAC;CACJ"}
