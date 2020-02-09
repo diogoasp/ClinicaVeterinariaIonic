@@ -1,8 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
+    <ion-icon slot="start" color="medium" name="list-box" class="iconTop"></ion-icon>
+    <ion-title>      
       Cadastros
     </ion-title>
+    <img slot="end" width="8%" height="8%" src="{{'../assets/icon/logo1.png'}}" class="animalIco">
   </ion-toolbar>
 </ion-header>
 
@@ -51,7 +53,7 @@
             <label>Sexo:</label>
             <span>&nbsp;{{a.sexo}}</span>
           </ion-item>
-          <ion-item>
+          <ion-item (click)="showDetailsCliente(a.responsavel.id)">
             <label>Responsável:</label>
             <span>&nbsp;{{a.responsavel.nome}}</span>
           </ion-item>

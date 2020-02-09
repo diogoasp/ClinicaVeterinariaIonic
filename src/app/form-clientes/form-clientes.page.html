@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-icon slot="start" color="medium" name="person-add" class="iconTop"></ion-icon>
     <ion-title>      
-      Cadastro de Clientes
+      Novo Cliente
     </ion-title>
     <img slot="end" width="8%" height="8%" src="{{'../assets/icon/logo1.png'}}" class="animalIco">
   </ion-toolbar>
@@ -10,8 +10,8 @@
 
 <ion-content>
   <ion-list>
-    <ion-item>
-      <ion-input type="hidden" name="id" [(ngModel)]="cliente.id"></ion-input>
+    <ion-item hidden>
+      <ion-input  name="id" [(ngModel)]="cliente.id"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Nome</ion-label>
