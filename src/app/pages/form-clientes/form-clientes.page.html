@@ -4,7 +4,7 @@
     <ion-title>      
       Novo Cliente
     </ion-title>
-    <img slot="end" width="8%" height="8%" src="{{'../assets/icon/logo1.png'}}" class="animalIco">
+    <img slot="end" width="8%" height="8%" src="{{'../../assets/icon/logo1.png'}}" class="animalIco">
   </ion-toolbar>
 </ion-header>
 
@@ -30,6 +30,6 @@
       <ion-input type="text" name="email" [(ngModel)]="cliente.email"></ion-input>
     </ion-item>
   </ion-list>
-  <ion-button block (click)="save()">Salvar</ion-button>
+  <ion-button color="primary" class="buttonRight" shape="round" block (click)="save()">Salvar</ion-button>
   <ion-button color="secondary" class="buttonRight" shape="round" href="/tabs/register">Voltar</ion-button>
 </ion-content>

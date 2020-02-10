@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiAnimalService } from '../service/api-animais.service';
+import { ApiAnimalService } from '../../service/api-animais.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ApiClientesService } from '../service/api-clientes.service';
-import { Cliente } from '../models/Cliente';
-import { Animal } from '../models/Animal';
+import { ApiClientesService } from '../../service/api-clientes.service';
+import { Cliente } from '../../models/Cliente';
+import { Animal } from '../../models/Animal';
 import { Observable } from 'rxjs';
 
 @Component({

@@ -8,39 +8,39 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   },
   {
     path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+    loadChildren: () => import('./pages/contact/contact.module').then( m => m.ContactPageModule)
   },
   {
     path: 'form-clientes',
-    loadChildren: () => import('./form-clientes/form-clientes.module').then( m => m.FormClientesPageModule)
+    loadChildren: () => import('./pages/form-clientes/form-clientes.module').then( m => m.FormClientesPageModule)
   },
   {
     path: 'form-animais',
-    loadChildren: () => import('./form-animais/form-animais.module').then( m => m.FormAnimaisPageModule)
+    loadChildren: () => import('./pages/form-animais/form-animais.module').then( m => m.FormAnimaisPageModule)
   },
   {
     path: 'form-consultas',
-    loadChildren: () => import('./form-consultas/form-consultas.module').then( m => m.FormConsultasPageModule)
+    loadChildren: () => import('./pages/form-consultas/form-consultas.module').then( m => m.FormConsultasPageModule)
   },
   {
     path: 'form-clientes/:id',
-    loadChildren: () => import('./form-clientes/form-clientes.module').then(m => m.FormClientesPageModule)
+    loadChildren: () => import('./pages/form-clientes/form-clientes.module').then(m => m.FormClientesPageModule)
   },
   {
     path: 'form-animais/:id',
-    loadChildren: () => import('./form-animais/form-animais.module').then(m => m.FormAnimaisPageModule)
+    loadChildren: () => import('./pages/form-animais/form-animais.module').then(m => m.FormAnimaisPageModule)
   },
   {
     path: 'form-consultas/:id',
-    loadChildren: () => import('./form-consultas/form-consultas.module').then(m => m.FormConsultasPageModule)
+    loadChildren: () => import('./pages/form-consultas/form-consultas.module').then(m => m.FormConsultasPageModule)
   },
   {
     path: 'details-cliente/:id',
-    loadChildren: () => import('./details-cliente/details-cliente.module').then( m => m.DetailsClientePageModule)
+    loadChildren: () => import('./pages/details-cliente/details-cliente.module').then( m => m.DetailsClientePageModule)
   }
 ];
 @NgModule({

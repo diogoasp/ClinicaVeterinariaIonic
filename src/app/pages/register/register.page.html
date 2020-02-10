@@ -4,14 +4,14 @@
     <ion-title>      
       Cadastros
     </ion-title>
-    <img slot="end" width="8%" height="8%" src="{{'../assets/icon/logo1.png'}}" class="animalIco">
+    <img slot="end" width="8%" height="8%" src="{{'../../assets/icon/logo1.png'}}" class="animalIco">
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <ion-list id="listMenu">
-    <ion-item>
+    <ion-item lines="none">
       <ion-button class = "menu" color = "primary" (click)="showListCliente()">
         <ion-icon name ="person" slot="start"></ion-icon>
         Cliente
@@ -26,7 +26,7 @@
   <ion-list id="listaAnimal" hidden>
     <ion-item-sliding class="lista" *ngFor="let a of animais | async" >
       <ion-item lines="none" (click)="showDetailsAnimal(a.id)" class="animalItem">
-        <img width="24px" height="24px" src="{{'../assets/icon/' + a.especie + '.png'}}" class="animalIco">
+        <img width="32px" height="32px" src="{{'../../assets/icon/' + a.especie + '.png'}}" class="animalIco">
         <h4>&emsp;{{a.nome}}</h4>
       </ion-item>
       <ion-item-options side="end">
@@ -39,7 +39,7 @@
           Alterar
         </ion-button>
       </ion-item-options>
-      <ion-item hidden id="{{a.id}}">
+      <ion-item lines="none" hidden id="{{a.id}}">
         <ion-list lines="none">
           <ion-item>
             <label>Raça:</label>

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { ApiAnimalService } from 'src/app/service/api-animais.service';
 import { Consulta } from 'src/app/models/Consulta';
 import { ApiConsultasService } from 'src/app/service/api-consultas.service';
-import { Animal } from '../models/Animal';
+import { Animal } from '../../models/Animal';
 
 @Component({
   selector: 'app-consultation',

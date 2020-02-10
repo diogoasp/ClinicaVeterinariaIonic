@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Consulta } from '../models/Consulta';
+import { Consulta } from '../../models/Consulta';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ApiConsultasService } from '../service/api-consultas.service';
+import { ApiConsultasService } from '../../service/api-consultas.service';
 import { Observable } from 'rxjs';
-import { ApiAnimalService } from '../service/api-animais.service';
-import { Animal } from '../models/Animal';
-import { TypeAnimal } from '../models/TypeAnimal';
+import { ApiAnimalService } from '../../service/api-animais.service';
+import { Animal } from '../../models/Animal';
+import { TypeAnimal } from '../../models/TypeAnimal';
 
 @Component({
   selector: 'app-form-consultas',

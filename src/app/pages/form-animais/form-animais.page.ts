@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Animal } from '../models/Animal';
+import { Animal } from '../../models/Animal';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ApiAnimalService } from '../service/api-animais.service';
-import { ApiClientesService } from '../service/api-clientes.service';
+import { ApiAnimalService } from '../../service/api-animais.service';
+import { ApiClientesService } from '../../service/api-clientes.service';
 import { Observable } from 'rxjs';
-import { Cliente } from '../models/Cliente';
-import { TypeCliente } from '../models/TypeCliente';
+import { Cliente } from '../../models/Cliente';
+import { TypeCliente } from '../../models/TypeCliente';
 
 @Component({
   selector: 'app-form-animais',
